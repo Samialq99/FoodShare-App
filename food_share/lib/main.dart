@@ -2,21 +2,61 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+  return _MyAppState();
+  }
+}
+
+class _MyAppState extends State <MyApp> {
+  List<String> _Products =['Food Tester'];
+
+
+
+  @override
+  //this is called an annotation starts with @sign, its to say this method
+  //overrides another medthod. 
   Widget build(BuildContext) {
+
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
           title: Text("Welcome to Food Share"),
-
         ),
-      ),
+        body: Column(children: [
+          Container(
+            margin: EdgeInsets.all(10.0),
+          child: RaisedButton(
+              onPressed: () {
+                //fetch data from server
+
+
+              },
+              child: Text('Add Product') ),
+          ),
+          Column(children: <Widget>[],)
+          _products.map((element)=> Card(child: Column(children: <Widget> [
+              Image.asset('assets/Krishna.jpg'),
+              Text(element)
+          //Text("Home Made Food By People Like You!!")
+        ],),), ),
+
+        ],
+        
+
+    )),
     );
   }
 }
 
+// dart is type language,
+// scalable app means it grows big with customer base can handle
+//large customer base. and easy for devs to maintain it as it grows.
+//type languge means specify the type ahead, like widget build.
+// type is in front of function variable parameter and etc.
 
-
+//when changing file names you cant hot reload .
 
 
 

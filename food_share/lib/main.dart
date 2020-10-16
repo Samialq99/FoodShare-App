@@ -5,47 +5,45 @@ void main() => runApp(MyApp());
 class MyApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-  return _MyAppState();
+    return _MyAppState();
   }
 }
 
-class _MyAppState extends State <MyApp> {
-  List<String> _Products =['Food Tester'];
-
-
+class _MyAppState extends State<MyApp> {
+  List<String> _Products = ['Food Tester'];
 
   @override
   //this is called an annotation starts with @sign, its to say this method
-  //overrides another medthod. 
+  //overrides another medthod.
   Widget build(BuildContext) {
-
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
           title: Text("Welcome to Food Share"),
         ),
-        body: Column(children: [
-          Container(
-            margin: EdgeInsets.all(10.0),
-          child: RaisedButton(
-              onPressed: () {
-                //fetch data from server
-
-
-              },
-              child: Text('Add Product') ),
-          ),
-          Column(children: <Widget>[],)
-          _products.map((element)=> Card(child: Column(children: <Widget> [
-              Image.asset('assets/Krishna.jpg'),
-              Text(element)
-          //Text("Home Made Food By People Like You!!")
-        ],),), ),
-
-        ],
-        
-
-    )),
+        body: Column(
+          children: [
+            Container(
+              margin: EdgeInsets.all(10.0),
+              child: RaisedButton(
+                  onPressed: () {
+                    //fetch data from server
+                  },
+                  child: Text('Add Product')),
+            ),
+            Card(
+              child: Column(
+                children: <Widget>[
+                  //_products.map((element)=> Card(child: Column(children: <Widget> [
+                  Image.asset('assets/Krishna.jpg'),
+                  Text("Food Yumm")
+                  //Text("Home Made Food By People Like You!!")
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
@@ -57,9 +55,6 @@ class _MyAppState extends State <MyApp> {
 // type is in front of function variable parameter and etc.
 
 //when changing file names you cant hot reload .
-
-
-
 
 // import 'package:flutter/material.dart';
 //
